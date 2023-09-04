@@ -1,11 +1,13 @@
 const inputName = document.querySelector("#name-input");
 const outputName = document.querySelector("#name-output");
 
-const getName = (name) => {
-  if (name.value !== "") {
-    outputName.textContent = inputName.value;
+const getName = () => {
+  if (inputName.value === "") {
+    outputName.innerHTML = "Anonymous";
+    // outputName.textContent = inputName.value;
   } else {
-    outputName.textContent = "Anonymous";
+    // outputName.innerHTML = "Anonymous";
+    outputName.textContent = inputName.value;
   }
 };
 
